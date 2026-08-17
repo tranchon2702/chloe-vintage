@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+
+# builds
+frontend/dist/
+backend/dist/
+.netlify/
+
+# environment
+.env
+.env.local
+backend/.env
+frontend/.env.local
+
+# local data
+backend/storage/contacts.ndjson
+backend/storage/content.json
+backend/storage/content.json.tmp
+backend/storage/media/
+
+# tests and logs
+**/.chloe-test-*
+coverage/
+logs/
+*.log
+
+# system and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,26 @@
+{
+  "name": "chloe-web-vintage",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Chloe relationship-led sales portfolio — Vite frontend + Express TypeScript API.",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently -n frontend,backend -c magenta,blue \"npm run dev -w @chloe/frontend\" \"npm run dev -w @chloe/backend\"",
+    "build": "npm run build -w @chloe/frontend && npm run build -w @chloe/backend",
+    "start": "npm run start -w @chloe/backend",
+    "check": "npm run check -w @chloe/frontend && npm run check -w @chloe/backend",
+    "test": "npm run test -w @chloe/backend",
+    "verify": "npm run check && npm run build && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "prettier": "^3.4.2"
+  }
+}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#241d1b" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>CHLOE — Quản trị nội dung</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="/src/admin.js"></script>
+  </head>
+  <body>
+    <section class="login-view" data-login-view>
+      <div class="login-decoration" aria-hidden="true">C</div>
+      <form class="login-card" data-login-form>
+        <div class="login-brand">
+          <span class="brand-seal">C</span>
+          <div>
+            <strong>CHLOE</strong>
+            <small>CONTENT ATELIER</small>
+          </div>
+        </div>
+        <p class="eyebrow">Khu vực riêng tư</p>
+        <h1>Chào mừng<br />Chloe trở lại.</h1>
+        <p class="login-intro">
+          Đăng nhập để cập nhật nội dung, hình ảnh và cách các phần xuất hiện trên website.
+        </p>
+        <label class="field-label" for="admin-password">Mật khẩu quản trị</label>
+        <div class="password-field">
+          <input
+            id="admin-password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            placeholder="Nhập mật khẩu"
+            required
+            autofocus
+          />
+          <button type="button" data-toggle-password aria-label="Hiện mật khẩu">Hiện</button>
+        </div>
+        <p class="form-message" data-login-message role="alert"></p>
+        <button class="primary-button login-button" type="submit" data-login-submit>
+          <span>Vào trang quản trị</span>
+          <span aria-hidden="true">↗</span>
+        </button>
+        <a class="back-link" href="/">← Trở về website</a>
+      </form>
+    </section>
+
+    <div class="dashboard" data-dashboard hidden>
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <span class="brand-seal">C</span>
+          <div>
+            <strong>CHLOE</strong>
+            <small>CONTENT ATELIER</small>
+          </div>
+        </div>
+        <div class="content-status">
+          <i aria-hidden="true"></i>
+          <span data-save-state>Đã đồng bộ</span>
+        </div>
+        <nav class="admin-nav" aria-label="Các nhóm nội dung" data-admin-nav></nav>
+        <div class="sidebar-footer">
+          <a href="/" target="_blank" rel="noopener">
+            Xem website
+            <span aria-hidden="true">↗</span>
+          </a>
+          <button type="button" data-logout>Đăng xuất</button>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="workspace-header">
+          <button
+            class="mobile-nav-toggle"
+            type="button"
+            data-mobile-nav-toggle
+            aria-label="Mở danh mục"
+            aria-expanded="false"
+          >
+            <span></span><span></span>
+          </button>
+          <div>
+            <p class="eyebrow" data-panel-kicker>Nội dung website</p>
+            <h1 data-panel-title>Tổng quan & SEO</h1>
+          </div>
+          <div class="header-actions">
+            <div class="language-tabs" data-language-tabs>
+              <button type="button" data-language="vi" class="is-active">VI</button>
+              <button type="button" data-language="en">EN</button>
+            </div>
+            <button class="primary-button save-button" type="button" data-save disabled>
+              <span data-save-label>Lưu thay đổi</span>
+              <span aria-hidden="true">⌘S</span>
+            </button>
+          </div>
+        </header>
+
+        <div class="workspace-meta">
+          <p data-panel-description>
+            Chỉnh tiêu đề tìm kiếm, thông tin liên hệ và các nội dung dùng chung.
+          </p>
+          <p>Lần cập nhật: <time data-updated-at>Chưa có</time></p>
+        </div>
+
+        <form class="editor-form" data-editor-form>
+          <div class="editor-panel" data-editor-panel></div>
+        </form>
+      </main>
+    </div>
+
+    <div class="toast" data-admin-toast role="status" aria-live="polite"></div>
+  </body>
+</html>
